@@ -11,4 +11,7 @@ class Trucker extends Model
     public function trucks(){
         return $this->belongsToMany('App\Models\Truck');
     }
+    public function packages(){
+        return $this->hasMany('App\Models\Trucker');
+    }
 }

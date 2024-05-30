@@ -20,7 +20,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('trucker_id')->nullable();
 
-            $table->foreign('trucker_id')->references('id')->on('truckers')->onDelete('cascade');
+            $table->foreign('trucker_id')
+            ->references('id')
+            ->on('truckers')->onDelete('cascade');
         });
     }
 

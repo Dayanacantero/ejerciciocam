@@ -12,7 +12,9 @@ class TruckTruckerController extends Controller
      */
     public function index()
     {
-        //
+        $truckers= Trucker::all();
+        $trucks= Truck::all();
+        return view('trucks.asociar',compact('truckers','trucks'));
     }
 
     /**
@@ -28,7 +30,10 @@ class TruckTruckerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $truck=Truck::find($request->truck_id);
+        $truck->truckers()->attach($request->trucker_id);
+
+        return 'echo';
     }
 
     /**
