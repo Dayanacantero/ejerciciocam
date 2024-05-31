@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Trucker extends Model
 {
     use HasFactory;
+    public function packages(){
+        return $this->hasMany('App\Models\Package');
+    }
     public function trucks(){
         return $this->belongsToMany('App\Models\Truck');
     }
-    public function packages(){
-        return $this->hasMany('App\Models\Trucker');
-    }
+   
 }

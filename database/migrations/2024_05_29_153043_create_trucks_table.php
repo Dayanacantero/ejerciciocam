@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('type');
             $table->string('model');
             $table->string('power');
-
-
             $table->timestamps();
         });
     }

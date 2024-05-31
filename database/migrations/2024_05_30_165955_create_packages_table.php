@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('address');
             $table->timestamps();
 
-            $table->unsignedBigInteger('trucker_id')->nullable();
+            $table->unsignedBigInteger('truckers_id')->nullable();
 
-            $table->foreign('trucker_id')
+            $table->foreign('truckers_id')
             ->references('id')
             ->on('truckers')->onDelete('cascade');
         });

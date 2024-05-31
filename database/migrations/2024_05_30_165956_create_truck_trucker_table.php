@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('truck_truckers', function (Blueprint $table) {
+        Schema::create('truck_trucker', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('truck_id')->nullable();
@@ -20,8 +20,7 @@ return new class extends Migration
             $table->foreign('truck_id')->references('id')->on('trucks')->onDelete('cascade');
             $table->foreign('trucker_id')->references('id')->on('truckers')->onDelete('cascade');
 
-
-
+            
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('truck_truckers');
+        Schema::dropIfExists('truck_trucker');
     }
 };

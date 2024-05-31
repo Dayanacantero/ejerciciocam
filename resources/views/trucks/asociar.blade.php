@@ -17,7 +17,7 @@
         <h1>Camion:</h1>
         <select name="truck_id">
             @foreach($trucks as $truck)
-                <option value="{{ $truck->id }}">{{ $truck->id }} - {{ $truck->Tipo }}</option>
+                <option value="{{ $truck->id }}">{{ $truck->id }} - {{ $truck->model }}</option>
             @endforeach
         </select>
         <br>

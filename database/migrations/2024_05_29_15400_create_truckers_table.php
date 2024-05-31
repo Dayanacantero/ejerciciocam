@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('truckers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name',45);
             $table->string('poblacion');
             $table->integer('telefono');
             $table->string('adress');
             $table->integer('salario');
-
-
-
             $table->timestamps();
         });
     }
