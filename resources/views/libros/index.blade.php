@@ -15,13 +15,12 @@
 
     <p>{{ $libro->title }}</p>
 
-    <!-- Botón para ver detalles del libro -->
+ 
     <a href="{{ route('libros.show', $libro->id) }}">Ver Detalles</a>
 
-    <!-- Botón para editar el libro -->
     <a href="{{ route('libros.edit', $libro->id) }}">Editar</a>
 
-    <!-- Formulario para eliminar el libro -->
+  
     <form action="{{ route('libros.destroy', $libro->id) }}" method="post">
         @csrf
         @method('DELETE')
